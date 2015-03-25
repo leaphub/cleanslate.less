@@ -1,0 +1,24 @@
+{
+  "name": "cleanslate.less",
+  "version": "1.0.0",
+  "homepage": "https://github.com/leaphub/cleanslate.less",
+  "authors": [
+    "David Gorges <david.gorges@leaphub.de>"
+  ],
+  "description": "An extreme css reset less mixin for embeddable widgets. Based on premasagar/cleanslate",
+  "main": "dist/cleanslate.min.css",
+  "keywords": [
+    "less"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gulp": "~3.8.11"
+  }
+}

@@ -1,0 +1,223 @@
+/*
+  Cleanslate.less
+*/
+
+/* == BLANKET RESET RULES == */
+
+/* HTML 4.01 */
+.cleanslate() {
+  h1, h2, h3, h4, h5, h6, p, td, dl, tr, dt, ol, form, select, option, pre, div, table, th, tbody, tfoot, caption, thead, ul, li, address, blockquote, dd, fieldset, li, iframe, strong, legend, em, s, cite, span, input, sup, label, dfn, object, big, q, font, samp, acronym, small, img, strike, code, sub, ins, textarea, var, a, abbr, applet, del, kbd, tt, b, i, hr,
+    /* HTML5 */
+  article, aside, dialog, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    background-attachment: scroll !important;
+    background-color: transparent !important;
+    background-image: none !important; /* This rule affects the use of pngfix JavaScript http://dillerdesign.com/experiment/DD_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replace the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */
+    background-position: 0 0 !important;
+    background-repeat: repeat !important;
+    border-color: black !important;
+    border-color: currentColor !important; /* `border-color` should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font 'color' value <http://www.w3.org/TR/css3-color/#currentcolor>. For older browsers, a default of 'black' is given before this rule. Guideline to support older browsers: if you haven't already declared a border-color for an element, be sure to do so, e.g. when you first declare the border-width. */
+    border-radius: 0 !important;
+    border-style: none !important;
+    border-width: medium !important;
+    box-sizing: content-box !important;
+    bottom: auto !important;
+    clear: none !important;
+    clip: auto !important;
+    color: inherit !important;
+    counter-increment: none !important;
+    counter-reset: none !important;
+    cursor: auto !important;
+    direction: inherit !important;
+    display: inline !important;
+    float: none !important;
+    font-family: inherit !important; /* As with other inherit values, this needs to be set on the root container element */
+    font-size: inherit !important;
+    font-style: inherit !important;
+    font-variant: normal !important;
+    font-weight: inherit !important;
+    height: auto !important;
+    left: auto !important;
+    letter-spacing: normal !important;
+    line-height: inherit !important;
+    list-style-type: inherit !important; /* Could set list-style-type to none */
+    list-style-position: outside !important;
+    list-style-image: none !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    opacity: 1;
+    outline: invert none medium !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    quotes: "" "" !important;
+    right: auto !important;
+    table-layout: auto !important;
+    text-align: inherit !important;
+    text-decoration: inherit !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    top: auto !important;
+    unicode-bidi: normal !important;
+    vertical-align: baseline !important;
+    visibility: inherit !important;
+    white-space: normal !important;
+    width: auto !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+
+    /* Proprietary and draft rules */
+    /* This section needs extending */
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    text-shadow: none !important;
+  }
+
+  /* == BLOCK-LEVEL == */
+  /* Actually, some of these should be inline-block and other values, but block works fine (TODO: rigorously verify this) */
+  /* HTML 4.01 */
+  h3, h5, p, h1, dl, dt, h6, ol, form, select, option, pre, div, h2, caption, h4, ul, address, blockquote, dd, fieldset, hr,
+    /* HTML5 new elements */
+  article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
+    display: block !important;
+  }
+
+  textarea {
+    display: inline-block !important;
+  }
+
+  table {
+    display: table !important;
+  }
+  thead {
+    display: table-header-group !important;
+  }
+  tbody {
+    display: table-row-group !important;
+  }
+  tfoot {
+    display: table-footer-group !important;
+  }
+  tr {
+    display: table-row !important;
+  }
+  th, td {
+    display: table-cell !important;
+    vertical-align: middle !important;
+  }
+  td[valign=top] {
+    vertical-align: top !important
+  }
+  td[valign=bottom] {
+    vertical-align: bottom !important
+  }
+  /* == SPECIFIC ELEMENTS == */
+  /* Some of these are browser defaults; some are just useful resets */
+
+  nav ul, nav ol {
+    list-style-type: none !important;
+  }
+  ul, menu {
+    list-style-type: disc !important;
+  }
+  ol {
+    list-style-type: decimal !important;
+  }
+  ol ul, ul ul, menu ul, ol menu, ul menu, menu menu {
+    list-style-type: circle !important;
+  }
+  ol ol ul, ol ul ul, ol menu ul, ol ol menu, ol ul menu, ol menu menu, ul ol ul, ul ul ul, ul menu ul, ul ol menu, ul ul menu, ul menu menu, menu ol ul, menu ul ul, menu menu ul, menu ol menu, menu ul menu, menu menu menu {
+    list-style-type: square !important;
+  }
+  li {
+    display: list-item !important;
+    /* Fixes IE7 issue with positioning of nested bullets */
+    min-height: auto !important;
+    min-width: auto !important;
+  }
+  strong {
+    font-weight: bold !important;
+  }
+  em {
+    font-style: italic !important;
+  }
+  kbd, samp, code {
+    font-family: monospace !important;
+  }
+  a, a *, input[type=submit], input[type=radio], input[type=checkbox], select {
+    cursor: pointer !important;
+  }
+  a:hover {
+    text-decoration: underline !important;
+  }
+  button, input[type=submit] {
+    text-align: center !important;
+  }
+  input[type=hidden] {
+    display: none !important;
+  }
+  abbr[title], acronym[title], dfn[title] {
+    cursor: help !important;
+    border-bottom-width: 1px !important;
+    border-bottom-style: dotted !important;
+  }
+  ins {
+    background-color: #ff9 !important;
+    color: black !important;
+  }
+  del {
+    text-decoration: line-through !important;
+  }
+  blockquote, q {
+    quotes: none !important; /* HTML5 */
+  }
+  blockquote:before, blockquote:after, q:before, q:after, li:before, li:after {
+    content: "" !important;
+  }
+  input, select {
+    vertical-align: middle !important;
+  }
+  select, textarea, input {
+    border: 1px solid #ccc !important;
+  }
+  table {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+  }
+  hr {
+    display: block !important;
+    height: 1px !important;
+    border: 0 !important;
+    border-top: 1px solid #ccc !important;
+    margin: 1em 0 !important;
+  }
+  *[dir=rtl] {
+    direction: rtl !important;
+  }
+  mark {
+    background-color: #ff9 !important;
+    color: black !important;
+    font-style: italic !important;
+    font-weight: bold !important;
+  }
+
+  /* == ROOT CONTAINER ELEMENT == */
+  /* This contains default values for child elements to inherit  */
+
+  font-size: medium !important;
+  line-height: 1 !important;
+  direction: ltr !important;
+  text-align: left !important;
+  font-family: "Times New Roman", Times, serif !important; /* Override this with whatever font-family is required */
+  color: black !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  text-decoration: none !important;
+  list-style-type: disc !important;
+
+}
