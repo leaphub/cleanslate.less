@@ -14,6 +14,7 @@ gulp.task('less', function () {
         .pipe(gulp.dest('dist'))
         .pipe(sourcemaps.write('../dist'))
         .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('demo/css'))
 });
 
 gulp.task('minify', function() {
