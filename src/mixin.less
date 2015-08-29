@@ -5,219 +5,440 @@
 /* == BLANKET RESET RULES == */
 
 /* HTML 4.01 */
-.cleanslate() {
-  h1, h2, h3, h4, h5, h6, p, td, dl, tr, dt, ol, form, select, option, pre, div, table, th, tbody, tfoot, caption, thead, ul, li, address, blockquote, dd, fieldset, li, iframe, strong, legend, em, s, cite, span, input, sup, label, dfn, object, big, q, font, samp, acronym, small, img, strike, code, sub, ins, textarea, var, a, abbr, applet, del, kbd, tt, b, i, hr,
-    /* HTML5 */
-  article, aside, dialog, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
-    background-attachment: scroll !important;
-    background-color: transparent !important;
-    background-image: none !important; /* This rule affects the use of pngfix JavaScript http://dillerdesign.com/experiment/DD_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replace the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */
-    background-position: 0 0 !important;
-    background-repeat: repeat !important;
-    border-color: black !important;
-    border-color: currentColor !important; /* `border-color` should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font 'color' value <http://www.w3.org/TR/css3-color/#currentcolor>. For older browsers, a default of 'black' is given before this rule. Guideline to support older browsers: if you haven't already declared a border-color for an element, be sure to do so, e.g. when you first declare the border-width. */
-    border-radius: 0 !important;
-    border-style: none !important;
-    border-width: medium !important;
-    box-sizing: content-box !important;
-    bottom: auto !important;
-    clear: none !important;
-    clip: auto !important;
-    color: inherit !important;
-    counter-increment: none !important;
-    counter-reset: none !important;
-    cursor: auto !important;
-    direction: inherit !important;
-    display: inline !important;
-    float: none !important;
+.cleanslate(@font-family-default: "\"Times New Roman\", Times, serif") {
+
+
+/* == BLANKET RESET RULES == */
+
+/* HTML 4.01 */
+h1, h2, h3, h4, h5, h6, p, td, dl, tr, dt, ol, form, select, option, pre, div, table,  th, tbody, tfoot, caption, thead, ul, li, address, blockquote, dd, fieldset, li, iframe, strong, legend, em, summary, cite, span, input, sup, label, dfn, object, big, q, samp, acronym, small, img, strike, code, sub, ins, textarea, button, var, a, abbr, applet, del, kbd, tt, b, i, hr,
+
+/* HTML5 - Sept 2013 taken from MDN https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list */
+article, aside, figure, figcaption, footer, header, menu, nav, section, time, mark, audio, video, abbr, address, area, blockquote, canvas, caption, cite, code, colgroup, col, datalist, fieldset, main, map, meta, optgroup, output, progress {
+    background-attachment:scroll !important;
+    background-color:transparent !important;
+    background-image:none !important; /* This rule affects the use of pngfix JavaScript http://dillerdesign.com/experiment/DD_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replace the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */
+    background-position:0 0 !important;
+    background-repeat:repeat !important;
+    border-color:black !important;
+    border-color:currentColor !important; /* `border-color` should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font 'color' value <http://www.w3.org/TR/css3-color/#currentcolor>. For older browsers, a default of 'black' is given before this rule. Guideline to support older browsers: if you haven't already declared a border-color for an element, be sure to do so, e.g. when you first declare the border-width. */
+    border-radius:0 !important;
+    border-style:none !important;
+    border-width:medium !important;
+    bottom:auto !important;
+    clear:none !important;
+    clip:auto !important;
+    color:inherit !important;
+    counter-increment:none !important;
+    counter-reset:none !important;
+    cursor:auto !important;
+    direction:inherit !important;
+    display:inline !important;
+    float:none !important;
     font-family: inherit !important; /* As with other inherit values, this needs to be set on the root container element */
     font-size: inherit !important;
-    font-style: inherit !important;
-    font-variant: normal !important;
-    font-weight: inherit !important;
-    height: auto !important;
-    left: auto !important;
-    letter-spacing: normal !important;
-    line-height: inherit !important;
+    font-style:inherit !important;
+    font-variant:normal !important;
+    font-weight:inherit !important;
+    height:auto !important;
+    left:auto !important;
+    letter-spacing:normal !important;
+    line-height:inherit !important;
     list-style-type: inherit !important; /* Could set list-style-type to none */
     list-style-position: outside !important;
     list-style-image: none !important;
-    margin: 0 !important;
-    max-height: none !important;
-    max-width: none !important;
-    min-height: 0 !important;
-    min-width: 0 !important;
-    opacity: 1;
-    outline: invert none medium !important;
-    overflow: visible !important;
-    padding: 0 !important;
-    position: static !important;
+    margin:0 !important;
+    max-height:none !important;
+    max-width:none !important;
+    min-height:0 !important;
+    min-width:0 !important;
+    opacity:1;
+    outline:invert none medium !important;
+    overflow:visible !important;
+    padding:0 !important;
+    position:static !important;
     quotes: "" "" !important;
-    right: auto !important;
-    table-layout: auto !important;
-    text-align: inherit !important;
-    text-decoration: inherit !important;
-    text-indent: 0 !important;
-    text-transform: none !important;
-    top: auto !important;
-    unicode-bidi: normal !important;
-    vertical-align: baseline !important;
-    visibility: inherit !important;
-    white-space: normal !important;
-    width: auto !important;
-    word-spacing: normal !important;
-    z-index: auto !important;
-
-    /* Proprietary and draft rules */
-    /* This section needs extending */
-    -moz-border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    -moz-box-sizing: content-box !important;
+    right:auto !important;
+    table-layout:auto !important;
+    text-align:inherit !important;
+    text-decoration:inherit !important;
+    text-indent:0 !important;
+    text-transform:none !important;
+    top:auto !important;
+    unicode-bidi:normal !important;
+    vertical-align:baseline !important;
+    visibility:inherit !important;
+    white-space:normal !important;
+    width:auto !important;
+    word-spacing:normal !important;
+    z-index:auto !important;
+    
+    /* CSS3 */
+    /* Including all prefixes according to http://caniuse.com/ */
+    /* CSS Animations don't cascade, so don't require resetting */
+    -webkit-background-origin: padding-box !important;
+            background-origin: padding-box !important;
+    -webkit-background-clip: border-box !important;
+            background-clip: border-box !important;
+    -webkit-background-size: auto !important;
+       -moz-background-size: auto !important;
+            background-size: auto !important;
+    -webkit-border-image: none !important;
+       -moz-border-image: none !important;
+         -o-border-image: none !important;
+            border-image: none !important;
+    -webkit-border-radius:0 !important;
+       -moz-border-radius:0 !important;
+            border-radius: 0 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     -webkit-box-sizing: content-box !important;
-    box-sizing: content-box !important;
+       -moz-box-sizing: content-box !important;
+            box-sizing: content-box !important;
+    -webkit-column-count: auto !important;
+       -moz-column-count: auto !important;
+            column-count: auto !important;
+    -webkit-column-gap: normal !important;
+       -moz-column-gap: normal !important;
+            column-gap: normal !important;
+    -webkit-column-rule: medium none black !important;
+       -moz-column-rule: medium none black !important;
+            column-rule: medium none black !important;
+    -webkit-column-span: 1 !important;
+       -moz-column-span: 1 !important; /* doesn't exist yet but probably will */
+            column-span: 1 !important;
+    -webkit-column-width: auto !important;
+       -moz-column-width: auto !important;
+            column-width: auto !important;
+    font-feature-settings: normal !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    -webkit-hyphens: manual !important;
+       -moz-hyphens: manual !important;
+            hyphens: manual !important;
+    -webkit-perspective: none !important;
+       -moz-perspective: none !important;
+        -ms-perspective: none !important;
+         -o-perspective: none !important;
+            perspective: none !important;
+    -webkit-perspective-origin: 50% 50% !important;
+       -moz-perspective-origin: 50% 50% !important;
+        -ms-perspective-origin: 50% 50% !important;
+         -o-perspective-origin: 50% 50% !important;
+            perspective-origin: 50% 50% !important;
+    -webkit-backface-visibility: visible !important;
+       -moz-backface-visibility: visible !important;
+        -ms-backface-visibility: visible !important;
+         -o-backface-visibility: visible !important;
+            backface-visibility: visible !important;
     text-shadow: none !important;
-  }
+    -webkit-transition: all 0s ease 0s !important;
+            transition: all 0s ease 0s !important;
+    -webkit-transform: none !important;
+       -moz-transform: none !important;
+        -ms-transform: none !important;
+         -o-transform: none !important;
+            transform: none !important;
+    -webkit-transform-origin: 50% 50% !important;
+       -moz-transform-origin: 50% 50% !important;
+        -ms-transform-origin: 50% 50% !important;
+         -o-transform-origin: 50% 50% !important;
+            transform-origin: 50% 50% !important;
+    -webkit-transform-style: flat !important;
+       -moz-transform-style: flat !important;
+        -ms-transform-style: flat !important;
+         -o-transform-style: flat !important;
+            transform-style: flat !important;
+    word-break: normal !important;
+}
 
-  /* == BLOCK-LEVEL == */
-  /* Actually, some of these should be inline-block and other values, but block works fine (TODO: rigorously verify this) */
-  /* HTML 4.01 */
-  h3, h5, p, h1, dl, dt, h6, ol, form, select, option, pre, div, h2, caption, h4, ul, address, blockquote, dd, fieldset, hr,
-    /* HTML5 new elements */
-  article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
-    display: block !important;
-  }
+/* == BLOCK-LEVEL == */
+/* Actually, some of these should be inline-block and other values, but block works fine (TODO: rigorously verify this) */
+/* HTML 4.01 */
+.cleanslate, h3, h5, p, h1, dl, dt, h6, ol, form, option, pre, div, h2, caption, h4, ul, address, blockquote, dd, fieldset, hr,
 
-  textarea {
-    display: inline-block !important;
-  }
-
-  table {
-    display: table !important;
-  }
-  thead {
-    display: table-header-group !important;
-  }
-  tbody {
-    display: table-row-group !important;
-  }
-  tfoot {
-    display: table-footer-group !important;
-  }
-  tr {
-    display: table-row !important;
-  }
-  th, td {
-    display: table-cell !important;
-    vertical-align: middle !important;
-  }
-  td[valign=top] {
-    vertical-align: top !important
-  }
-  td[valign=bottom] {
-    vertical-align: bottom !important
-  }
-  /* == SPECIFIC ELEMENTS == */
-  /* Some of these are browser defaults; some are just useful resets */
-
-  nav ul, nav ol {
-    list-style-type: none !important;
-  }
-  ul, menu {
-    list-style-type: disc !important;
-  }
-  ol {
-    list-style-type: decimal !important;
-  }
-  ol ul, ul ul, menu ul, ol menu, ul menu, menu menu {
-    list-style-type: circle !important;
-  }
-  ol ol ul, ol ul ul, ol menu ul, ol ol menu, ol ul menu, ol menu menu, ul ol ul, ul ul ul, ul menu ul, ul ol menu, ul ul menu, ul menu menu, menu ol ul, menu ul ul, menu menu ul, menu ol menu, menu ul menu, menu menu menu {
-    list-style-type: square !important;
-  }
-  li {
-    display: list-item !important;
-    /* Fixes IE7 issue with positioning of nested bullets */
-    min-height: auto !important;
-    min-width: auto !important;
-  }
-  strong {
+/* HTML5 new elements */
+article, dialog, figure, footer, header, hgroup, menu, nav, section, audio, video, address, blockquote, colgroup, main, progress, summary {
+    display:block !important; 
+}
+h1, h2, h3, h4, h5, h6 {
     font-weight: bold !important;
-  }
-  em {
-    font-style: italic !important;
-  }
-  kbd, samp, code {
-    font-family: monospace !important;
-  }
-  a, a *, input[type=submit], input[type=radio], input[type=checkbox], select {
-    cursor: pointer !important;
-  }
-  a:hover {
-    text-decoration: underline !important;
-  }
-  button, input[type=submit] {
-    text-align: center !important;
-  }
-  input[type=hidden] {
-    display: none !important;
-  }
-  abbr[title], acronym[title], dfn[title] {
-    cursor: help !important;
-    border-bottom-width: 1px !important;
-    border-bottom-style: dotted !important;
-  }
-  ins {
-    background-color: #ff9 !important;
-    color: black !important;
-  }
-  del {
-    text-decoration: line-through !important;
-  }
-  blockquote, q {
-    quotes: none !important; /* HTML5 */
-  }
-  blockquote:before, blockquote:after, q:before, q:after, li:before, li:after {
-    content: "" !important;
-  }
-  input, select {
-    vertical-align: middle !important;
-  }
-  select, textarea, input {
-    border: 1px solid #ccc !important;
-  }
-  table {
-    border-collapse: collapse !important;
-    border-spacing: 0 !important;
-  }
-  hr {
-    display: block !important;
-    height: 1px !important;
-    border: 0 !important;
-    border-top: 1px solid #ccc !important;
+}
+h1 {
+    font-size: 2em !important;
+    padding: .67em 0 !important;
+}
+h2 {
+    font-size: 1.5em !important;
+    padding: .83em 0 !important;
+}
+h3 {
+    font-size: 1.17em !important;
+    padding: .83em 0 !important;
+}
+h4 {
+    font-size: 1em !important;
+}
+h5 {
+    font-size: .83em !important;
+}
+p {
     margin: 1em 0 !important;
-  }
-  *[dir=rtl] {
+}
+table {
+    display: table !important;
+}
+thead {
+    display: table-header-group !important;
+}
+tbody {
+    display: table-row-group !important;
+}
+tfoot {
+    display: table-footer-group !important;
+}
+tr {
+    display: table-row !important;
+}
+th, td {
+    display: table-cell !important;
+    padding: 2px !important;
+}
+
+/* == SPECIFIC ELEMENTS == */
+/* Some of these are browser defaults; some are just useful resets */
+ol, ul {
+    margin: 1em 0 !important;
+}
+ul li, ul ul li, ul ul ul li, ol li, ol ol li, ol ol ol li, ul ol ol li, ul ul ol li, ol ul ul li, ol ol ul li {
+    list-style-position: inside !important;
+    margin-top: .08em !important;
+}
+ol ol, ol ol ol, ul ul, ul ul ul, ol ul, ol ul ul, ol ol ul, ul ol, ul ol ol, ul ul ol {
+    padding-left: 40px !important;
+    margin: 0 !important;
+}
+/* helper for general navigation */
+nav ul, nav ol {
+    list-style-type:none !important;
+
+}
+ul, menu {
+    list-style-type:disc !important;
+}
+ol {
+    list-style-type:decimal !important;
+}
+ol ul, ul ul, menu ul, ol menu, ul menu, menu menu {
+    list-style-type:circle !important;
+}
+ol ol ul, ol ul ul, ol menu ul, ol ol menu, ol ul menu, ol menu menu, ul ol ul, ul ul ul, ul menu ul, ul ol menu, ul ul menu, ul menu menu, menu ol ul, menu ul ul, menu menu ul, menu ol menu, menu ul menu, menu menu menu {
+    list-style-type:square !important;
+}
+li {    
+    display:list-item !important;
+    /* Fixes IE7 issue with positioning of nested bullets */
+    min-height:auto !important;
+    min-width:auto !important;
+    padding-left: 20px !important; /* replace -webkit-padding-start: 40px; */
+}
+strong {
+    font-weight:bold !important;
+}
+em {
+    font-style:italic !important;
+}
+kbd, samp, code, pre {
+  font-family:monospace !important;
+}
+a {
+    color: blue !important;
+    text-decoration: underline !important;
+}
+a:visited {
+    color: #529 !important;
+}
+a, a *, input[type=submit], input[type=radio], input[type=checkbox], select {
+    cursor:pointer !important;
+}
+button, input[type=submit] {
+    text-align: center !important;
+    padding: 2px 6px 3px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    font-family: arial, helvetica, sans-serif !important;
+    font-size: small !important;
+    background: white !important;
+    -webkit-appearance: push-button !important;
+    color: buttontext !important;
+    border: 1px #a6a6a6 solid !important;
+    background: lightgrey !important; /* Old browsers */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%, rgba(209,209,209,1) 100%, rgba(221,221,221,1) 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(221,221,221,1)), color-stop(100%,rgba(209,209,209,1)), color-stop(100%,rgba(221,221,221,1))) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(221,221,221,1) 100%,rgba(209,209,209,1) 100%,rgba(221,221,221,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(221,221,221,1) 100%,rgba(209,209,209,1) 100%,rgba(221,221,221,1) 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(221,221,221,1) 100%,rgba(209,209,209,1) 100%,rgba(221,221,221,1) 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(221,221,221,1) 100%,rgba(209,209,209,1) 100%,rgba(221,221,221,1) 100%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ) !important; /* IE6-9 */
+    -webkit-box-shadow: 1px 1px 0px #eee !important;
+       -moz-box-shadow: 1px 1px 0px #eee !important;
+         -o-box-shadow: 1px 1px 0px #eee !important;
+            box-shadow: 1px 1px 0px #eee !important;
+    outline: initial !important;
+}
+button {
+    padding: 1px 6px 2px 6px !important;
+    margin-right: 5px !important;
+}
+input[type=hidden] {
+    display:none !important;
+}
+/* restore form defaults */
+textarea {
+    -webkit-appearance: textarea !important;
+    background: white !important;
+    padding: 2px !important;
+    margin-left: 4px !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+    font-size: 11px !important;
+    font-family: arial, helvetica, sans-serif !important;
+    line-height: 13px !important;
+    resize: both !important;
+}
+select, textarea, input {
+    border:1px solid #ccc !important;
+}
+select {
+    font-size: 11px !important;
+    font-family: helvetica, arial, sans-serif !important;
+    display: inline-block;
+}
+textarea:focus, input:focus {
+    outline: auto 5px -webkit-focus-ring-color !important;
+    outline: initial !important;
+}
+input[type=text] {
+    background: white !important;
+    padding: 1px !important;
+    font-family: initial !important;
+    font-size: small !important;
+}
+input[type=checkbox], input[type=radio] {
+    border: 1px #2b2b2b solid !important;
+    border-radius: 4px !important;
+}
+input[type=checkbox], input[type=radio] {
+    outline: intial !important;
+}
+input[type=radio] {
+    margin: 2px 2px 3px 2px !important;
+}
+input[type=submit]:active, button:active {
+    background: rgb(59,103,158) !important; /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(59,103,158,1) 0%, rgba(43,136,217,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(59,103,158,1)), color-stop(50%,rgba(43,136,217,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* W3C */
+    border-color: #5259b0 !important;
+}
+abbr[title], acronym[title], dfn[title] {
+    cursor:help !important;
+    border-bottom-width:1px !important;
+    border-bottom-style:dotted !important;
+}
+ins {
+    background-color:#ff9 !important;
+    color:black !important;
+}
+del {
+    text-decoration: line-through !important;
+}
+blockquote, q  {
+    quotes:none !important; /* HTML5 */
+}
+blockquote:before, blockquote:after, q:before, q:after, li:before, li:after  {
+    content:"" !important;
+}
+input, select {
+    vertical-align:middle !important;
+}
+
+table {
+    border-collapse:collapse !important;
+    border-spacing:0 !important;
+}
+hr {
+    display:block !important;
+    height:1px !important;
+    border:0 !important;
+    border-top:1px solid #ccc !important;
+    margin:1em 0 !important;
+}
+*[dir=rtl] {
     direction: rtl !important;
-  }
-  mark {
-    background-color: #ff9 !important;
-    color: black !important;
-    font-style: italic !important;
-    font-weight: bold !important;
-  }
+}
+mark {
+    background-color:#ff9 !important;
+    color:black !important;
+    font-style:italic !important;
+    font-weight:bold !important;
+}
+menu {
+    padding-left: 40px !important;
+    padding-top: 8px !important;
+}
 
-  /* == ROOT CONTAINER ELEMENT == */
-  /* This contains default values for child elements to inherit  */
+/* additional helpers */
+[hidden],
+template {
+    display: none !important;
+}
+abbr[title] {
+    border-bottom: 1px dotted !important;
+}
+sub, sup {
+    font-size: 75% !important;
+    line-height: 0 !important;
+    position: relative !important;
+    vertical-align: baseline !important;
+}
+sup {
+    top: -0.5em !important;
+}
+sub {
+    bottom: -0.25em !important;
+}
+img {
+    border: 0 !important;
+}
+figure {
+    margin: 0 !important;
+}
+textarea {
+    overflow: auto !important;
+    vertical-align: top !important;
+}
 
+/* == ROOT CONTAINER ELEMENT == */
+/* This contains default values for child elements to inherit  */
   font-size: medium !important;
   line-height: 1 !important;
-  direction: ltr !important;
-  text-align: left !important;
-  font-family: "Times New Roman", Times, serif !important; /* Override this with whatever font-family is required */
+  direction:ltr !important;
+  text-align: left !important; /* for IE, Opera */
+  text-align: start !important; /* recommended W3C Spec */
+  font-family: @font-family-default !important; 
   color: black !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  text-decoration: none !important;
-  list-style-type: disc !important;
+  font-style:normal !important;
+  font-weight:normal !important;
+  text-decoration:none !important;
+  list-style-type:disc !important;
+
+pre {
+    white-space:pre !important;
+}
 
 }

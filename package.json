@@ -1,6 +1,6 @@
 {
   "name": "cleanslate.less",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An extreme css reset less mixin for embeddable widgets. Based on premasagar/cleanslate",
   "main": "gulpfile.js",
   "dependencies": {},
